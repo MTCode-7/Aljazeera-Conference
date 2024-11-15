@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogCommentsController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\InfoController;
 use App\Http\Controllers\TagsController;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\SuperAdmin;
@@ -38,6 +39,9 @@ Route::get('/blog/{blog}/edit', [BlogController::class, 'edit'])->name('blog.edi
 Route::put('/blog/{blog}/update', [BlogController::class, 'update'])->name('blog.update');
 Route::any('/blog/{blog}/delete',[BlogController::class,'destroy'])->name('blog.delete');
 
+// Info
+Route::get('/about-us',[InfoController::class,'about'])->name('about');
+Route::get('/contact-us',[InfoController::class,'contact'])->name('contact');
 
 
 // Comments

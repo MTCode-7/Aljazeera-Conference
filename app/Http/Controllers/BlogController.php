@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -68,7 +69,13 @@ class BlogController extends Controller
     public function show(Blog $blog)
     {
         $tags = Tag::all();
-        return view('blog.show', compact('blog'))->with('tags', $tags);
+        // return view('blog.show', compact('blog'))->with('tags', $tags);
+        return view('blog.show', [
+            'blog'=>$blog,
+            'tags' => $tags,
+            'url' => url()->current(), // رابط الصفحة الحالية
+            'excerpt' => Str::limit($blog->text, 100) // نص مختصر للمقال
+        ]);
     }
 
     /**

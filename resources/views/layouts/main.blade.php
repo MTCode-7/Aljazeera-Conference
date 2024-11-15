@@ -291,40 +291,19 @@
                         </a>
 
                         <ul class="main-menu">
-                            <li>
-                                <a href="index.html">Home</a>
+                            <li class="mega-menu-item {{ Route::currentRouteName() == 'blog.index'  ? 'main-menu-active' : '' }}">
+                                <a href="{{route('blog.index')}}">Home</a>
                             </li>
 
-                            <li class="mega-menu-item">
-                                <a href="category-01.html">News</a>
+                            <li class="mega-menu-item {{ Route::currentRouteName() == 'about'  ? 'main-menu-active' : '' }}">
+                                <a href="{{route('about')}}">About us</a>
                             </li>
-
-                            <li class="mega-menu-item main-menu-active">
-                                <a href="category-02.html">Entertainment </a>
-
-                            </li>
-
-                            <li class="mega-menu-item">
-                                <a href="category-01.html">Business</a>
-
-                            </li>
-
-                            <li class="mega-menu-item">
-                                <a href="category-02.html">Travel</a>
-                            </li>
-
-                            <li class="mega-menu-item">
-                                <a href="category-01.html">Life Style</a>
-                            </li>
-
-                            <li class="mega-menu-item">
-                                <a href="category-02.html">Video</a>
-
+                            <li class="mega-menu-item {{ Route::currentRouteName() == 'contact'  ? 'main-menu-active' : '' }}">
+                                <a href="{{route('contact')}}">Contact us</a>
                             </li>
 
                             <li>
                                 <a href="#">Features</a>
-
                             </li>
                         </ul>
                     </nav>

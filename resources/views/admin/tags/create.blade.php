@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h5 class="card-title fw-semibold mb-4">انشاء مقالة جديدة</h5>
+                        <h5 class="card-title fw-semibold mb-4">انشاء سمة جديدة</h5>
                         <div class="card">
                             <div class="card-body">
                                 <form method="POST" action="{{route('tags.store')}}">

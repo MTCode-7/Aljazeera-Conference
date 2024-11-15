@@ -20,7 +20,6 @@
                             <h6 class="fw-semibold fs-4 mb-0">{{ $blog->added_by }} <span
                                     class="ms-2 fw-normal text-muted fs-3">{{ $blog->created_at->diffForHumans() }}</span>
                             </h6>
-                            {{-- <p>{{$blog->created_at->diffForHumans()}}</p> --}}
                         </div>
                     </div>
                 </div>
